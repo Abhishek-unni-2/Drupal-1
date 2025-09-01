@@ -9,11 +9,9 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      # Step 1: Checkout source code
+      # Step 1: Checkout source code (without submodules)
       - name: Checkout Code
         uses: actions/checkout@v4
-        with:
-          submodules: true  # if you have git submodules
 
       # Step 2: Configure AWS credentials
       - name: Configure AWS Credentials
